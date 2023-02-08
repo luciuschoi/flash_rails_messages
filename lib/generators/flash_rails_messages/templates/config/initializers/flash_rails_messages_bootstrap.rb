@@ -3,14 +3,14 @@ module FlashRailsMessages
     # BOOTSTRAP FRAMEWORK
     # =========================================
 
-    # def alert_element(type, message)
-      # content_tag :div, alert_options(type) do
-        # content = ActiveSupport::SafeBuffer.new
-        # content += close_element if options.fetch(:dismissible, false)
-        # content += message.html_safe
-        # content
-      # end
-    # end
+    def alert_element(type, message)
+      content_tag :div, alert_options(type) do
+        content = ActiveSupport::SafeBuffer.new
+        content += message.html_safe
+        content += close_element if options.fetch(:dismissible, false)
+        content
+      end
+    end
 
     def close_element
       content_tag :button, type: 'button', class: 'btn-close', 'data-bs-dismiss': 'alert', 'aria-label': 'Close' 

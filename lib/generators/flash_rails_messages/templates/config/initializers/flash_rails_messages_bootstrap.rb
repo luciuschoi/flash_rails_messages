@@ -13,7 +13,7 @@ module FlashRailsMessages
     end
 
     def close_element
-      content_tag :button, type: 'button', class: 'btn-close', 'data-bs-dismiss': 'alert', 'aria-label': 'Close' 
+      content_tag :button, "", type: 'button', class: 'btn-close', 'data-bs-dismiss': 'alert', 'aria-label': 'Close' 
     end
 
     # def default_alert_classes
